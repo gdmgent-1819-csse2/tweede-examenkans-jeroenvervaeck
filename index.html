@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSE2: EK2 opdracht - Jeroen Vervaeck</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>EK 2: Computer Science &amp; Software Engineering 2 - Jeroen Vervaeck</h1>
+
+        <!--Vector bewerking-->
+        <h2>Selecteer een vectorbewerking</h1>
+
+            <select id="selectOperationVect">
+                <option value="0">Vectoren optellen</option>
+                <option value="1">Vectoren vermenigvuldigen</option>
+            </select>
+
+            <h3 id=txtOperationVect>Vectoren optellen</h3>
+
+            <form class="form">
+                    <p id="colorVectorA_red">Vector A:</p>
+                    x: <input type="range" min="-1" max="1" step="0.1" id="vectorA_x" value="0.5">
+                    y: <input type="range" min="-1" max="1" step="0.1" id="vectorA_y" value="0">
+                    <br>
+                <div style="display: block" id="divVectorB">
+                    <p id="colorVectorA_blue">Vector B:</p>
+                    x: <input type="range" min="-1" max="1" step="0.1" id="vectorB_x" value="0">
+                    y: <input type="range" min="-1" max="1" step="0.1" id="vectorB_y" value="0.5">
+                    <br>
+                </div>
+                <div style="display: none" id="divScailerVect">
+                    <br>
+                    Scalair:
+                    <br>
+                    <input type="range" min="-1" max="1" step="0.1" id="scalar" value="0.5">
+                    <br>
+                </div>
+            </form>
+            <div id="divVectorCanvas" class="classCanvas"></div>
+
+            <!--Matrix bewerking-->
+            <h2>Selecteer een matrixbewerking</h1>
+
+                <select id="selectOperationMtx">
+                    <option value="2">Rotatie vector</option>
+                    <option value="3">Scale vector</option>
+                </select>
+
+                <h3 id=txtOperationMtx>Rotatie vector</h3>
+
+                <form class="form">
+                    <div style="display: block" id="divRotMtx">
+                        Θ: <input type="range" min="-180" max="180" step="10" id="rot_omega">
+                        <br>
+                    </div>
+                    <div style="display: none" id="divScaleMtx">
+                        Sx: <input type="range" min="-1" max="1" step="0.1" id="scale_x"><br>
+                        Sy: <input type="range" min="-1" max="1" step="0.1" id="scale_y">
+                        <br>
+                    </div>
+                </form>
+                <div id="divMatrixCanvas" class="classCanvas"></div>
+
+    </main>
+</body>
+
+</html>
