@@ -53,7 +53,6 @@ export default class Canvas {
     
 
     updateCanvasHandler(event) {
-        //console.log('updateCanvas')
         this.clearData()
         this.operation()
         this.drawScene()
@@ -75,8 +74,8 @@ export default class Canvas {
         this.data.positions.push(0,0)
         vectorA.add(vectorB)
         this.data.positions.push(vectorA.x, vectorA.y)
-        this.data.colors.push(...this.colors['magenta'])
-        this.data.colors.push(...this.colors['magenta'])
+        this.data.colors.push(...this.colors['red'])
+        this.data.colors.push(...this.colors['red'])
 
     }
 
@@ -94,7 +93,7 @@ export default class Canvas {
         let vector = new Vector2(0, 0.8)
         vector.rot(this.ranges[2].value)
         this.data.positions.push(vector.x, vector.y)
-        this.data.colors.push(...this.colors['white'])
+        this.data.colors.push(...this.colors['red'])
         this.data.colors.push(...this.colors['red'])
     }
 
@@ -110,28 +109,14 @@ export default class Canvas {
     }
 
 
-    // Methode to execute Clock
+    // Methode to execute the canvas-element
     run() {
         try {
             this.createCanvas()
             this.createShaders()
             this.createProgram()
             this.createVertexArray()
-            // Initial drawing on the canvas
-            /*{
-                // Random points
-                for (let i = 0, max = 100; i < max; i++) {
-                    this.data.positions.push(Math.random() * 2 - 1, Math.random() * 2 - 1)
-                    this.data.colors.push(Math.round(Math.random() * 255), Math.round(Math.random() * 255), Math.round(Math.random() * 255), 0)
-                }
-                // White point in the middle.
-                this.data.positions.push(0, 0)
-                this.data.colors.push(...this.colors.white)
-            }*/
             this.drawScene()
-
-
-
         } catch (error) {
             console.error(error)
         }

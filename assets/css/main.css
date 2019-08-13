@@ -4,15 +4,13 @@
 
 canvas {
     background-color: var(--background);
+    border: black, 10px;
+    border-style: solid;
 }
 
 .form{
-    padding: 10px;
-}
-
-canvas{
-    border: black, 10px;
-    border-style: solid;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 #colorVectorA_red{
@@ -21,4 +19,13 @@ canvas{
 
 #colorVectorA_blue{
     color: blue;
+}
+
+.divWrapperValue{
+    display: flex;
+}
+
+p{
+    padding-left: 5px;
+    padding-right: 5px;
 }

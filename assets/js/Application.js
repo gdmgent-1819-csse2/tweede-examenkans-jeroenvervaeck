@@ -36,10 +36,6 @@ export default class Application {
 
     /** methode to draw Canvas     */
     run() {
-        /*let txt = document.createElement('p')
-        txt.innerHTML = '<strong>Vectorbewerking 1:</strong> Optellen van vectoren'
-        document.body.appendChild(txt)*/
-
         const width = 400
         const height = 400
 
@@ -82,6 +78,30 @@ export default class Application {
         }
         window.dispatchEvent(new Event('updateCanvas'))
 
-        
+        // Write inputValue in p-element
+        document.getElementById("vectorA_x").oninput = function() {
+            document.getElementById("vectorA_xValue").innerHTML = document.getElementById("vectorA_x").value
+        }
+        document.getElementById("vectorA_y").oninput = function() {
+            document.getElementById("vectorA_yValue").innerHTML = document.getElementById("vectorA_y").value
+        }
+        document.getElementById("vectorB_x").oninput = function() {
+            document.getElementById("vectorB_xValue").innerHTML = document.getElementById("vectorB_x").value
+        }
+        document.getElementById("vectorB_y").oninput = function() {
+            document.getElementById("vectorB_yValue").innerHTML = document.getElementById("vectorB_y").value
+        }
+        document.getElementById("scalar").oninput = function() {
+            document.getElementById("scailerValue").innerHTML = document.getElementById("scalar").value
+        }
+        document.getElementById("rot_omega").oninput = function() {
+            document.getElementById("rotValue").innerHTML = -document.getElementById("rot_omega").value + "°"
+        }
+        document.getElementById("scale_x").oninput = function() {
+            document.getElementById("scale_xValue").innerHTML = document.getElementById("scale_x").value
+        }
+        document.getElementById("scale_y").oninput = function() {
+            document.getElementById("scale_yValue").innerHTML = document.getElementById("scale_y").value
+        }
     }
 }
