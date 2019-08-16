@@ -42,14 +42,12 @@ export default class Matrix2 {
     mul(b) {
         const a = this.elements
         const c = []
-        console.log("a" + a)
-        console.log("b" + b)
+
         c[0] = a[0] * b[0] + a[1] * b[2]
         c[1] = a[0] * b[1] + a[1] * b[3]
         c[2] = a[2] * b[0] + a[3] * b[2]
         c[3] = a[2] * b[1] + a[3] * b[3]
         
-        console.log("dicks"  +  c)
         this.elements = c
     }
 

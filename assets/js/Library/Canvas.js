@@ -91,7 +91,7 @@ export default class Canvas {
     matrixRotate(){
         this.data.positions.push(0,0)
         let vector = new Vector2(0, 0.8)
-        vector.rot(this.ranges[2].value)
+        vector.rot(-this.ranges[2].value)
         this.data.positions.push(vector.x, vector.y)
         this.data.colors.push(...this.colors['red'])
         this.data.colors.push(...this.colors['red'])

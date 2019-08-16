@@ -62,7 +62,6 @@ export default class Vector2 {
      */
     rot(d) {
         const m = new Matrix2([this.x,0, this.y,0])
-        console.log(m)
         m.rot(d)
         this.x = m.elements[0]
         this.y = m.elements[2]

@@ -7,11 +7,10 @@ export default class Application {
      * Create a new application.
      */
     constructor() {
-        const tests = false
+        const tests = true
         if (tests) {
             new Tests()
         }
-        console.info('WebGL2 Demo')
 
         this.shaderSources = {
             fragment: null,
@@ -95,7 +94,7 @@ export default class Application {
             document.getElementById("scailerValue").innerHTML = document.getElementById("scalar").value
         }
         document.getElementById("rot_omega").oninput = function() {
-            document.getElementById("rotValue").innerHTML = -document.getElementById("rot_omega").value + "°"
+            document.getElementById("rotValue").innerHTML = document.getElementById("rot_omega").value + "°"
         }
         document.getElementById("scale_x").oninput = function() {
             document.getElementById("scale_xValue").innerHTML = document.getElementById("scale_x").value

@@ -18,7 +18,7 @@
 
             <select id="selectOperationVect">
                 <option value="0">Vectoren optellen</option>
-                <option value="1">Vectoren vermenigvuldigen</option>
+                <option value="1">Vectoren scalair vermenigvuldigen</option>
             </select>
 
             <h3 id=txtOperationVect>Vectoren optellen</h3>
@@ -62,7 +62,7 @@
 
                 <select id="selectOperationMtx">
                     <option value="2">Rotatie vector</option>
-                    <option value="3">Scale vector</option>
+                    <option value="3">Schaalmatrix toepassen op een vector</option>
                 </select>
 
                 <h3 id=txtOperationMtx>Rotatie vector</h3>
@@ -76,6 +76,7 @@
                         </div>
                     </div>
                     <div style="display: none" id="divScaleMtx">
+                        <p>Parameters schaalvector:</p>
                         <div class="divWrapperValue">
                             <p>Sx:</p>
                             <input type="range" min="-1" max="1" step="0.1" id="scale_x" value="0.5">
